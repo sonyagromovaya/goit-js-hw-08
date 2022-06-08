@@ -10,5 +10,8 @@ const helloWorld = data => {
 };
 // player.play();
 player.on('timeupdate', throttle(helloWorld, 1000));
+const savedTime = localStorage.getItem('videoplayer-current-time');
 
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+if (savedTime) {
+  player.setCurrentTime(savedTime);
+}
