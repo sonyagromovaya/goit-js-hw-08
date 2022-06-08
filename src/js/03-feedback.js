@@ -29,7 +29,7 @@ if (localStorage.getItem(FEED_BACK) !== null) {
 const submittedAction = event => {
   event.preventDefault();
   if (emailEl.value === '' || messageEl.value === '') {
-    console.log("Didn't submit, please fill another field");
+    console.log("Didn't submit, please fill another field.");
     return;
   } else {
     console.log(formData);
